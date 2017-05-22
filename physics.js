@@ -42,7 +42,7 @@ if(str == "motion"){
           console.log(motion.distance2(str2[2],str2[3],str2[1]));
           end();
         }
-      })
+      });
     }
     else if(str1 == "v"){
       printOptions();
@@ -57,7 +57,7 @@ if(str == "motion"){
           console.log(motion.velocity2(str2[0],str2[3],str2[2]));
           end();
         }
-      })
+      });
     }
     else if(str1 == "a"){
       printOptions();
@@ -65,7 +65,7 @@ if(str == "motion"){
         str2 = convertToArray(str2);
         console.log(motion.acceleration(str2[0],str2[3],str2[1]));
         end();
-      })
+      });
     }
     else if(str1 == "t"){
       printOptions();
@@ -73,22 +73,22 @@ if(str == "motion"){
         str2 = convertToArray(str2);
         console.log(motion.time(str2[0],str2[1]));
         end();
-      })
+      });
     }
     else{
       console.log("Not a variable");
       }
-    })
+    });
   }
   else if(str == "energy"){
     terminal.question("What variable are you looking for?", function(str1){
-      if(str1 == "Ke"){
+      if(str1 == "ke"){
         printOptions();
         terminal.question("What variables do you know?", function(str2){
           str2 = convertToArray(str2);
           console.log(motion.kineticEnergy(str2[4],str2[1]));
           end();
-        })
+        });
       }
       else if(str1 == "m"){
         printOptions();
@@ -96,7 +96,7 @@ if(str == "motion"){
           str2 = convertToArray(str2);
           console.log(motion.mass(str2[5],str2[1]));
           end();
-        })
+        });
       }
       else if(str1 == "v"){
         printOptions();
@@ -104,15 +104,16 @@ if(str == "motion"){
           str2 = convertToArray(str2);
           console.log(motion.velocity(str2[5],str2[4]));
           end();
-        })
+        });
       }
       else{
         console.log("Not a variable");
+        end();
       }
-    })
+    });
   }
   else{
       console.log("That is not an option");
+      end();
     }
-  }
-});
+  });
